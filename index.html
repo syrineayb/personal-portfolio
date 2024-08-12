@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syrine Elayeb Portfolio</title>
+    <link rel="icon" href="assets/myphoto.ico" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body class="flex">
+    
+ <!-- Sidebar Section -->
+ <aside id="sidebar" class="sidebar open bg-gray-800 text-white w-64 min-h-screen py-6 px-4">
+    <nav>
+        <ul class="flex flex-col items-center">
+            <li class="mb-4"><a href="#home" class="nav-link hover:text-blue-400"><i class="fas fa-home"></i> Home</a></li>
+            <li class="mb-4"><a href="#about" class="nav-link hover:text-blue-400"><i class="fas fa-user"></i> About</a></li>
+            <li class="mb-4"><a href="#projects" class="nav-link hover:text-blue-400"><i class="fas fa-project-diagram"></i> Projects</a></li>
+            <li><a href="#contact" class="nav-link hover:text-blue-400"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </nav>
+</aside>
+
+<!-- Toggle Button -->
+<button id="toggle-btn" class="fixed top-4 left-4 z-50 text-white bg-blue-600 p-3 rounded-full hover:bg-blue-700 focus:outline-none">
+    <i class="fas fa-bars"></i>
+</button>
+
+
+<!-- Main Content Section -->
+<main class="flex-1 p-6 ml-64 transition-margin duration-300" id="main-content">
+<!-- Home Section -->
+<section id="home" class="h-screen bg-cover bg-center text-white relative" style="background-image: url('assets/background-home-1.jpg');">
+    <div class="absolute inset-0 bg-black opacity-50"></div> <!-- Overlay for better text visibility -->
+    <div class="container mx-auto px-6 text-center relative z-10 h-full flex flex-col items-center justify-center">
+        <div>
+            <h2 class="text-4xl font-bold mb-4">Welcome to My Portfolio</h2>
+            <h3 class="text-3xl font-bold mb-2">Syrine Elayeb</h3>
+            <a href="#about" class="bg-blue-600 text-white py-2 px-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors">Full Stack Developer</a>
+        </div>
+    </div>
+</section>
+
+<!-- Color Picker Section -->
+<div id="color-picker" class="fixed top-4 right-4 z-50 bg-white p-2 shadow-lg rounded-lg w-24">
+    <h3 class="text-sm font-bold mb-1 text-center">Choose a Color Scheme</h3>
+    <div class="color-circles flex space-x-1">
+        <div class="color-circle" data-primary="#872642 " data-secondary="#872642 " style="background-color: #872642 ;"></div>
+        <div class="color-circle" data-primary="#688F4E" data-secondary="#688F4E" style="background-color: #688F4E;"></div>
+        <div class="color-circle" data-primary="#3357FF" data-secondary="#5B8DFF" style="background-color: #3357FF;"></div>
+        <div class="color-circle" data-primary="#F38630" data-secondary="#F38630" style="background-color: #F38630;"></div>
+        <div class="color-circle" data-primary="#9754CB  " data-secondary="#9754CB" style="background-color: #9754CB  ;"></div>
+    </div>
+</div>
+
+
+
+<!-- About Section -->
+<section id="about" class="py-16 bg-gray-100 h-screen flex flex-col items-center justify-center">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl font-bold mb-4">About Me</h2>
+        <div class="flex flex-col md:flex-row items-center justify-center mb-6">
+            <img src="assets/myphoto.png" alt="Syrine Elayeb" class="w-32 h-32 rounded-full mb-4 md:mb-0 md:mr-6">
+            <p class="text-lg max-w-lg">
+                I am a Full Stack Developer with a Bachelor's degree in Computer Technology specializing in Information Systems Development. I have experience creating robust web applications using Spring Boot and Angular.
+            </p>
+        </div>
+        <section id="cv" class="bg-white py-8 mt-4 w-full max-w-lg mx-auto rounded-lg shadow-md">
+            <div class="container mx-auto px-6 text-center">
+               <!--X <h3 class="text-3xl font-bold mb-4">Download My CV</h3>-->
+                <p class="text-gray-700 mb-4">Click the button below to download my CV:</p>
+                <a href="Syrine-Elayeb-FlowCV-Resume.pdf" download class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">
+                    Download CV
+                </a>
+            </div>
+        </section>
+    </div>
+</section>
+
+
+        
+<!-- Projects Section -->
+<section id="projects" class="projects-section bg-gray-100 h-screen flex flex-col items-center justify-center">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-8">
+            <h2 class="text-4xl font-bold mb-4">Projects</h2>
+        </div>
+        <div id="projects-container" class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <!-- Project items will be dynamically added here -->
+        </div>
+        <!-- Pagination Controls -->
+        <div id="pagination" class="flex justify-center mt-6">
+            <!-- Pagination buttons will be dynamically added here -->
+        </div>
+    </div>
+</section>
+
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section py-16 bg-white">
+    <div class="container mx-auto px-6">
+        <!-- Get in Touch Section -->
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold mb-4">Get in Touch</h2>
+            <div class="max-w-lg mx-auto bg-gray-100 p-8 rounded-lg shadow-md">
+                <div class="flex flex-col space-y-4">
+                    <!-- Email -->
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-blue-600 mr-3"></i>
+                        <a href="mailto:cyrineayb@gmail.com" class="text-gray-700 hover:text-blue-500">cyrineayb@gmail.com</a>
+                    </div>
+                    <!-- Phone -->
+                    <div class="flex items-center">
+                        <i class="fas fa-phone text-blue-600 mr-3"></i>
+                        <a href="tel:+50778952" class="text-gray-700 hover:text-blue-500">+50778952</a>
+                    </div>
+                    <!-- Location -->
+                    <div class="flex items-center">
+                        <i class="fas fa-map-marker-alt text-blue-600 mr-3"></i>
+                        <p class="text-gray-700">Tunisia</p>
+                    </div>
+                    <!-- Social Media Links -->
+                    <div class="flex justify-center space-x-6 mt-6">
+                        <a href="https://www.linkedin.com/in/syrine-elayeb-455235243/" target="_blank" class="text-blue-600 hover:text-blue-800">
+                            <i class="fab fa-linkedin fa-2x"></i>
+                        </a>
+                        <a href="https://github.com/syrineayb" target="_blank" class="text-gray-700 hover:text-gray-900">
+                            <i class="fab fa-github fa-2x"></i>
+                        </a>
+                        <a href="https://twitter.com/Cyrineayb" target="_blank" class="text-blue-400 hover:text-blue-600">
+                            <i class="fab fa-twitter fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form Section -->
+        <div class="text-center">
+            <h2 class="text-4xl font-bold mb-4">Contact Me</h2>
+            <form id="contactForm" class="max-w-lg mx-auto bg-gray-100 p-8 rounded-lg shadow-md">
+                <div class="form-group mb-4">
+                    <label for="name" class="block text-gray-700 mb-2">Name</label>
+                    <input type="text" id="name" class="w-full p-3 border border-gray-300 rounded-lg" required>
+                </div>
+                <div class="form-group mb-4">
+                    <label for="email" class="block text-gray-700 mb-2">Email</label>
+                    <input type="email" id="email" class="w-full p-3 border border-gray-300 rounded-lg" required>
+                </div>
+                <div class="form-group mb-4">
+                    <label for="message" class="block text-gray-700 mb-2">Message</label>
+                    <textarea id="message" class="w-full p-3 border border-gray-300 rounded-lg" required></textarea>
+                </div>
+                <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer bg-gray-800 text-white py-8">
+    <div class="container mx-auto text-center">
+        <!-- Copyright Information -->
+        <div>
+            <p>&copy; 2024 Syrine Elayeb. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('toggle-btn').addEventListener('click', function () {
+            const sidebar = document.getElementById('sidebar');
+            const mainContent = document.getElementById('main-content');
+            const isOpen = sidebar.style.left === '0px' || sidebar.classList.contains('open');
+            sidebar.style.left = isOpen ? '-16rem' : '0px';
+            mainContent.classList.toggle('shifted', !isOpen);
+        });
+    </script>
+</body>
+</html>
